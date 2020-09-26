@@ -6,7 +6,7 @@ The package can be used in different plugins in the same time if you create your
 
 Follow the steps before to properly setup the package.
 
-## Instructions
+### Instructions
 
 
 1.) Create base class called `BaseMigration`
@@ -101,4 +101,60 @@ function my_plugin_register_migrations() {
 
 }
 add_action('plugins_loaded', 'my_plugin_register_migrations');
+```
+
+### Creating columns
+
+You can create a lot of different column types with Table Migrations. Here's a list:
+
+| Command | Description |
+|---------|-------------|
+| $table->bigInteger('votes'); | BIGINT equivalent for the database. |
+| $table->binary('data');  | BLOB equivalent for the database. |
+| $table->boolean('confirmed'); | BOOLEAN equivalent for the database. |
+| $table->char('name', 4); | CHAR equivalent with a length. |
+| $table->date('created_at'); | DATE equivalent for the database. |
+| $table->dateTime('created_at'); | DATETIME equivalent for the database. |
+| $table->decimal('amount', 5, 2); | DECIMAL equivalent with a precision and scale. |
+| $table->double('column', 15, 8); | DOUBLE equivalent with precision, 15 digits in total and 8 after the decimal point. |
+| $table->float('amount', 8, 2); | FLOAT equivalent for the database, 8 digits in total and 2 after the decimal point. |
+| $table->increments('id'); } Incrementing ID (primary key) using a "UNSIGNED INTEGER" equivalent. |
+| $table->integer('votes'); | INTEGER equivalent for the database. |
+| $table->longText('description'); | LONGTEXT equivalent for the database. |
+| $table->mediumInteger('numbers'); | MEDIUMINT equivalent for the database. |
+| $table->mediumText('description'); | MEDIUMTEXT equivalent for the database. |
+| $table->smallInteger('votes'); | SMALLINT equivalent for the database. |
+| $table->string('email'); | VARCHAR equivalent column. |
+| $table->string('name', 100); | VARCHAR equivalent with a length. |
+| $table->text('description'); | TEXT equivalent for the database. |
+| $table->time('sunrise'); | TIME equivalent for the database. |
+| $table->tinyInteger('numbers'); | TINYINT equivalent for the database. |
+| $table->timestamp('added_on'); | TIMESTAMP equivalent for the database. |
+
+---
+
+### Contributions
+
+If you are interested in contributing to the project. Feel free to submit your issue or pull request.
+
+
+### License
+
+```
+Copyright (C) 2020 Darko Gjorgjijoski (https://darkog.com)
+
+This file is part of wp-migrations
+
+WP Migrations is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+WP Migrations  is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with WP Migrations. If not, see <https://www.gnu.org/licenses/>.
 ```
