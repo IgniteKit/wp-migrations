@@ -118,7 +118,10 @@ You can create a lot of different column types with Table Migrations. Here's a l
 | $table->decimal('amount', 5, 2); | DECIMAL equivalent with a precision and scale. |
 | $table->double('column', 15, 8); | DOUBLE equivalent with precision, 15 digits in total and 8 after the decimal point. |
 | $table->float('amount', 8, 2); | FLOAT equivalent for the database, 8 digits in total and 2 after the decimal point. |
-| $table->increments('id'); } Incrementing ID (primary key) using a "UNSIGNED INTEGER" equivalent. |
+| $table->increments('id'); | Incrementing ID (primary key) using a "UNSIGNED INTEGER" equivalent. |
+| $table->bigIncrements('id'); | Incrementing ID (primary key) using a "UNSIGNED BIGINT" equivalent. |
+| $table->smallIncrements('id'); | Incrementing ID (primary key) using a "UNSIGNED SMALLINT" equivalent. |
+| $table->mediumIncrements('id'); | Incrementing ID (primary key) using a "UNSIGNED MEDIUMINT" equivalent. |
 | $table->integer('votes'); | INTEGER equivalent for the database. |
 | $table->longText('description'); | LONGTEXT equivalent for the database. |
 | $table->mediumInteger('numbers'); | MEDIUMINT equivalent for the database. |
